@@ -18,7 +18,9 @@ setup(
             'docs',
             'logs',
             'models',
+            'plots',
             'test',
+            'plot_chart.py',
             'demo_tensorflow_info_bpr.py',
             'demo_torch_info_bpr.py'
         ]
