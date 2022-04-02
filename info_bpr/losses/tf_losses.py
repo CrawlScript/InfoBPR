@@ -26,11 +26,11 @@ def tf_info_bpr(a_embeddings, b_embeddings, pos_edges, num_negs=300):
             axis=1
             )
 
-    logits = tf.squeeze(embedded_neg_b @ tf.expand_dims(embedded_a, axis=-1), axis=-1)
+    logits = tf.squeeze(embedded_combined_b @ tf.expand_dims(embedded_a, axis=-1), axis=-1)
 
     info_bpr_loss = tf.nn.sparse_softmax_cross_entropy_with_logits(
             logits=logits,
-            labels=tf.ones_like(a_indices, dtype=tf.int64)
+            labels=tf.zeros_like(a_indices, dtype=tf.int64)
             )
 
     return info_bpr_loss

@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import torch.nn.functional as F
 
-def th_info_bpr(a_embeddings, b_embeddings, pos_edges, num_negs=300):
+def th_info_bpr(a_embeddings, b_embeddings, pos_edges, num_negs=300, reduction='mean'):
 
     if isinstance(pos_edges, list):
         pos_edges = np.array(pos_edges)
@@ -29,9 +29,9 @@ def th_info_bpr(a_embeddings, b_embeddings, pos_edges, num_negs=300):
 
     embedded_combined_b = torch.cat([embedded_b.unsqueeze(1), embedded_neg_b], 1)
 
-    logits = (embedded_neg_b @ embedded_a.unsqueeze(-1)).squeeze(-1)
+    logits = (embedded_combined_b @ embedded_a.unsqueeze(-1)).squeeze(-1)
 
-    info_bpr_loss = F.cross_entropy(logits, torch.zeros([num_pos_edges], dtype=torch.int64).to(device))
+    info_bpr_loss = F.cross_entropy(logits, torch.zeros([num_pos_edges], dtype=torch.int64).to(device), reduction=reduction)
 
     return info_bpr_loss
 
