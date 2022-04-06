@@ -31,7 +31,7 @@ plt.rc('legend', title_fontsize=BIGGER_SIZE)
 csv_base_dir = "csv_results"
 
 # csv_name = "bpr_yelp"
-csv_name = "Yelp2018"
+csv_name = "Yelp2018_v1"
 
 csv_fpath = os.path.join(csv_base_dir, "{}.csv".format(csv_name))
 
@@ -62,5 +62,5 @@ g.axhline(base_score)
 g.set(xlabel="Method")
 
 
-plt.show()
-# plt.savefig("plots/{}.png".format(csv_name), bbox_inches='tight')
+# plt.show()
+plt.savefig("plots/{}.png".format(csv_name), bbox_inches='tight')

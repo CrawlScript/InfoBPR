@@ -1,5 +1,0 @@
-Method,NDCG@20
-MF-BPR,0.0492
-LightGCN,0.0530
-UltraGCN,0.0561
-MF-InfoBPR,0.0572

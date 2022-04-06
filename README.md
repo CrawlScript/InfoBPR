@@ -20,7 +20,7 @@ MF (Matrix Factorization) can beat state-of-the-art GNN-based CF approaches with
 
 
 <p align="center">
-<img src="plots/Yelp2018.png" width="500"/>
+<img src="plots/Yelp2018_v1.png" width="500"/>
 <p align="center">NDCG@20 of different approaches on Yelp2018</p>
 </p>
 
