@@ -3,9 +3,14 @@ Simple Yet Powerful Ranking Loss
 
 We provide InfoBPR API for both TensorFlow and PyTorch.
 
-## Paper
-MGDCF: Distance Learning via Markov Graph Diffusion for Neural Collaborative Filtering
 
+__Paper:__ [MGDCF: Distance Learning via Markov Graph Diffusion for Neural Collaborative Filtering](https://arxiv.org/abs/2204.02338)
+
+## Homepage and Paper
+
++ Homepage (MGDCF): [https://github.com/hujunxianligong/MGDCF](https://github.com/hujunxianligong/MGDCF)
++ Homepage (InfoBPR Loss): [https://github.com/CrawlScript/InfoBPR](https://github.com/CrawlScript/InfoBPR)
++ Paper: [MGDCF: Distance Learning via Markov Graph Diffusion for Neural Collaborative Filtering](https://arxiv.org/abs/2204.02338) 
 
 
 
@@ -70,3 +75,28 @@ print("InfoBPR Loss: ", ranking_loss)
 ## DEMO
 
 [Matrix Factorization with InfoBPR Loss (MF-InfoBPR)](demo/demo_torch_mf_info_bpr.py)
+
+
+
+## Cite
+
+If you use InfoBPR in a scientific publication, we would appreciate citations to the following paper:
+
+@misc{https://doi.org/10.48550/arxiv.2204.02338,
+  doi = {10.48550/ARXIV.2204.02338},
+  
+  url = {https://arxiv.org/abs/2204.02338},
+  
+  author = {Hu, Jun and Qian, Shengsheng and Fang, Quan and Xu, Changsheng},
+  
+  keywords = {Social and Information Networks (cs.SI), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {MGDCF: Distance Learning via Markov Graph Diffusion for Neural Collaborative Filtering},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
